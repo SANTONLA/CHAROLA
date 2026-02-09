@@ -27,6 +27,16 @@ body {
     color: var(--color-chocolate);         /* texto marrón oscuro */
     line-height: 1.6;
 }
+/* =========================
+   HERO LETRAS VISIBLES
+========================= */
+.hero-content,
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    color: var(--color-dorado); /* letras doradas */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* sombra suave para contraste */
+}
 
 img {
     max-width: 100%;
