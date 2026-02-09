@@ -16,3 +16,13 @@ Busca unir una estructura clara, un diseño atractivo y pequeñas interacciones 
 
 ## 📂 Estructura del proyecto
 
+
+*(La estructura puede ampliarse según crezca el proyecto)*
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/delicias-charola.git
+
+
