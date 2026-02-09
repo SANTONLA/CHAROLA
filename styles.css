@@ -27,6 +27,25 @@ body {
     color: var(--color-texto);
     line-height: 1.6;
 }
+/* LOGO EN EL HERO */
+.hero {
+    position: relative; /* necesario para posicionar el logo */
+}
+
+.logo {
+    position: absolute;
+    top: 30px; /* distancia desde arriba, ajusta a tu gusto */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* asegura que quede por encima de la imagen */
+}
+
+.logo img {
+    width: 180px; /* ajusta tamaño según prefieras */
+    height: auto;
+}
+
+
 
 img {
     max-width: 100%;
