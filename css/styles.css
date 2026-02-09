@@ -71,6 +71,7 @@ p {
    HERO
 ========================= */
 .hero {
+    position: relative; /* para que el logo absolute funcione */
     min-height: 100vh;
     background:
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
@@ -80,8 +81,6 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    color: var(--color-dorado);
 }
 
 .hero-content h1,
