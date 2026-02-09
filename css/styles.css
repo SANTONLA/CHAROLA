@@ -2,11 +2,11 @@
    VARIABLES
 ========================= */
 :root {
-    --color-crema: #f8f4ef;       /* fondo principal */
-    --color-blanco: #ffffff;      /* para contraste en hero y botones */
-    --color-chocolate: #4b2e2b;   /* texto elegante y botones */
-    --color-dorado: #c9a24d;      /* detalles y hover */
-    --color-texto: #3a3a3a;       /* texto normal */
+    --color-crema: #f8f4ef;
+    --color-blanco: #ffffff;
+    --color-chocolate: #4b2e2b;
+    --color-dorado: #c9a24d;
+    --color-texto: #3a3a3a;
 }
 
 /* =========================
@@ -23,19 +23,9 @@
 ========================= */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--color-crema);  /* fondo crema elegante */
-    color: var(--color-chocolate);         /* texto marrón oscuro */
+    background-color: var(--color-crema);
+    color: var(--color-chocolate);
     line-height: 1.6;
-}
-/* =========================
-   HERO LETRAS VISIBLES
-========================= */
-.hero-content,
-.hero-content h1,
-.hero-content h2,
-.hero-content p {
-    color: var(--color-dorado); /* letras doradas */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* sombra suave para contraste */
 }
 
 img {
@@ -62,7 +52,6 @@ h2 {
     position: relative;
 }
 
-/* detalle vintage dorado */
 h2::after {
     content: "";
     display: block;
@@ -92,30 +81,29 @@ p {
     justify-content: center;
     text-align: center;
     position: relative;
-    color: var(--color-blanco);
+    color: var(--color-dorado);
 }
 
-.hero-content {
-    color: var(--color-blanco);
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    color: var(--color-dorado);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
-.hero h1,
-.hero h2,
-.hero p {
-    color: var(--color-blanco);
-}
-
+/* LOGO HERO */
 .logo {
     position: absolute;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 100;
 }
 
 .logo img {
     width: 180px;
     height: auto;
+    display: block;
 }
 
 /* =========================
@@ -142,13 +130,12 @@ p {
 ========================= */
 section {
     padding: 4rem 0;
-    background-color: var(--color-crema);  /* fondo crema por defecto */
+    background-color: var(--color-crema);
     color: var(--color-chocolate);
 }
 
 .historia { background-color: var(--color-crema); }
 .producto-estrella { background-color: var(--color-blanco); }
-.especialidades { background-color: var(--color-crema); }
 .pedidos { background-color: var(--color-blanco); }
 
 /* =========================
@@ -185,7 +172,22 @@ section {
     text-align: center;
 }
 
-        padding: 3rem 0;
-    }
+.footer .redes a {
+    margin: 0 0.8rem;
+    color: var(--color-dorado);
+    text-decoration: none;
+    font-weight: 600;
 }
+
+.footer .redes a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-secreto {
+    display: block;
+    margin-top: 1.2rem;
+    font-style: italic;
+    color: #f1e6c8;
+}
+
 
