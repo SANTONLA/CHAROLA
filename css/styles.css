@@ -89,6 +89,12 @@ p {
     color: var(--color-blanco);
 }
 
+.hero h1,
+.hero h2,
+.hero p {
+    color: var(--color-blanco);
+}
+
 .logo {
     position: absolute;
     top: 30px;
