@@ -1,19 +1,12 @@
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- CSS -->
-<link rel="stylesheet" href="css/styles.css">
-
-
 /* =========================
    VARIABLES
 ========================= */
 :root {
-    --color-crema: #f8f4ef;
-    --color-blanco: #ffffff;
-    --color-chocolate: #4b2e2b;
-    --color-dorado: #c9a24d;
-    --color-texto: #3a3a3a;
+    --color-crema: #f8f4ef;       /* fondo principal */
+    --color-blanco: #ffffff;      /* para contraste en hero y botones */
+    --color-chocolate: #4b2e2b;   /* texto elegante y botones */
+    --color-dorado: #c9a24d;      /* detalles y hover */
+    --color-texto: #3a3a3a;       /* texto normal */
 }
 
 /* =========================
@@ -30,29 +23,10 @@
 ========================= */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--color-blanco);
-    color: var(--color-texto);
+    background-color: var(--color-crema);  /* fondo crema elegante */
+    color: var(--color-chocolate);         /* texto marrón oscuro */
     line-height: 1.6;
 }
-/* LOGO EN EL HERO */
-.hero {
-    position: relative; /* necesario para posicionar el logo */
-}
-
-.logo {
-    position: absolute;
-    top: 30px; /* distancia desde arriba, ajusta a tu gusto */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10; /* asegura que quede por encima de la imagen */
-}
-
-.logo img {
-    width: 180px; /* ajusta tamaño según prefieras */
-    height: auto;
-}
-
-
 
 img {
     max-width: 100%;
@@ -78,7 +52,7 @@ h2 {
     position: relative;
 }
 
-/* detalle vintage */
+/* detalle vintage dorado */
 h2::after {
     content: "";
     display: block;
@@ -91,15 +65,7 @@ h2::after {
 p {
     max-width: 720px;
     margin-bottom: 1.2rem;
-}
-
-/* =========================
-   CONTENEDOR
-========================= */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
+    color: var(--color-chocolate);
 }
 
 /* =========================
@@ -108,38 +74,32 @@ p {
 .hero {
     min-height: 100vh;
     background:
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("https://github.com/SANTONLA/CHAROLA/blob/main/img/portada.jpg") center / cover no-repeat;
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("../img/portada.jpg") center / cover no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    color: var(--color-blanco);
 }
-<header class="hero">
-    <div class="logo">
-        <img src="img/logo.jpg" alt="Delicias Charola Logo">
-    </div>
-    <div class="hero-content">
-        <h1>Delicias Charola</h1>
-        <h2>Pastas artesanales de tradición y sabor</h2>
-        <p>Experiencia gourmet desde nuestra cocina familiar a tu mesa.</p>
-        <a href="#pedidos" class="btn-primary">Descubrí nuestras charolas</a>
-    </div>
-</header>
 
 .hero-content {
     color: var(--color-blanco);
 }
 
-.hero h1,
-.hero h2,
-.hero p {
-    color: var(--color-blanco);
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
-.hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+.logo img {
+    width: 180px;
+    height: auto;
 }
 
 /* =========================
@@ -166,50 +126,14 @@ p {
 ========================= */
 section {
     padding: 4rem 0;
+    background-color: var(--color-crema);  /* fondo crema por defecto */
+    color: var(--color-chocolate);
 }
 
-.historia {
-    background-color: var(--color-crema);
-}
-
-.producto-estrella {
-    background-color: var(--color-blanco);
-}
-
-.producto-estrella .destacado {
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.especialidades {
-    background-color: var(--color-crema);
-}
-
-.pedidos {
-    background-color: var(--color-blanco);
-}
-
-/* =========================
-   LISTAS
-========================= */
-.lista-especialidades {
-    list-style: none;
-    margin-top: 2rem;
-}
-
-.lista-especialidades li {
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.lista-especialidades li::before {
-    content: "•";
-    color: var(--color-dorado);
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-}
+.historia { background-color: var(--color-crema); }
+.producto-estrella { background-color: var(--color-blanco); }
+.especialidades { background-color: var(--color-crema); }
+.pedidos { background-color: var(--color-blanco); }
 
 /* =========================
    GALERÍA
@@ -236,23 +160,6 @@ section {
 }
 
 /* =========================
-   CONTACTO
-========================= */
-.contacto p {
-    margin-bottom: 0.5rem;
-}
-
-.contacto a {
-    color: var(--color-chocolate);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contacto a:hover {
-    color: var(--color-dorado);
-}
-
-/* =========================
    FOOTER
 ========================= */
 .footer {
@@ -262,56 +169,6 @@ section {
     text-align: center;
 }
 
-.footer p {
-    margin-bottom: 1rem;
-}
-
-.footer .redes a {
-    margin: 0 0.8rem;
-    color: var(--color-dorado);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.footer .redes a:hover {
-    text-decoration: underline;
-}
-
-.mensaje-secreto {
-    display: block;
-    margin-top: 1.2rem;
-    font-style: italic;
-    color: #f1e6c8;
-}
-
-/* =========================
-   ANIMACIONES (JS)
-========================= */
-section,
-.hero-content {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    section {
         padding: 3rem 0;
     }
 }
