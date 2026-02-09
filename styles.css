@@ -89,6 +89,17 @@ p {
     justify-content: center;
     text-align: center;
 }
+<header class="hero">
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Delicias Charola Logo">
+    </div>
+    <div class="hero-content">
+        <h1>Delicias Charola</h1>
+        <h2>Pastas artesanales de tradición y sabor</h2>
+        <p>Experiencia gourmet desde nuestra cocina familiar a tu mesa.</p>
+        <a href="#pedidos" class="btn-primary">Descubrí nuestras charolas</a>
+    </div>
+</header>
 
 .hero-content {
     color: var(--color-blanco);
